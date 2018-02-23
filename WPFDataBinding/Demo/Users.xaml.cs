@@ -22,7 +22,11 @@ namespace WPFDataBinding.Demo
     {
         string _table = "DEMO_USERS";
         string primarykey = "";
-        GenericCommands GenericCommandsObject = new GenericCommands();
+        //GenericCommands GenericCommandsObject = new GenericCommands();
+
+
+
+
 
         public Users()
         {

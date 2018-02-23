@@ -1,0 +1,6 @@
+C:\Users\vamshikrishna.pabba\source\repos\WPFDataBinding\DataBase\bin\Debug\DataBase.dll
+C:\Users\vamshikrishna.pabba\source\repos\WPFDataBinding\DataBase\bin\Debug\DataBase.pdb
+C:\Users\vamshikrishna.pabba\source\repos\WPFDataBinding\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\vamshikrishna.pabba\source\repos\WPFDataBinding\DataBase\obj\Debug\DataBase.dll
+C:\Users\vamshikrishna.pabba\source\repos\WPFDataBinding\DataBase\obj\Debug\DataBase.pdb
+C:\Users\vamshikrishna.pabba\source\repos\WPFDataBinding\DataBase\bin\Debug\DataBase.dll.config
