@@ -1,0 +1,23 @@
+﻿<Window x:Class="WPFDataBinding.Demo.Stocks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDataBinding.Demo"
+        mc:Ignorable="d"
+        Title="Stocks" Height="271.688" Width="745.916">
+    <Grid Margin="0,0,7,11">
+        <TextBox x:Name="inp_ItemName" HorizontalAlignment="Left" Height="23" Margin="560,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Item Name" HorizontalAlignment="Left" Margin="486,21,0,0" VerticalAlignment="Top"/>
+        <Label Content="Order Qty" HorizontalAlignment="Left" Margin="486,52,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="inp_OrderQty" HorizontalAlignment="Left" Height="23" Margin="560,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Vendor" HorizontalAlignment="Left" Margin="496,89,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="inp_vendor" HorizontalAlignment="Left" Height="23" Margin="560,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_Edit" Content="Edit" HorizontalAlignment="Left" Margin="469,172,0,0" VerticalAlignment="Top" Width="75" Click="btn_Edit_Click"/>
+        <Button x:Name="btn_Delete" Content="Delete" HorizontalAlignment="Left" Margin="560,172,0,0" VerticalAlignment="Top" Width="75" Click="btn_Delete_Click"/>
+        <Button x:Name="btn_Close" Content="Close" HorizontalAlignment="Left" Margin="648,172,0,0" VerticalAlignment="Top" Width="75" Click="btn_Close_Click"/>
+        <Button x:Name="btn_add1" Content="Add" HorizontalAlignment="Left" Margin="605,128,0,0" VerticalAlignment="Top" Width="75" Click="btn_add1_Click"/>
+        <DataGrid x:Name="StocksGrid" HorizontalAlignment="Left" Height="209" Margin="10,11,0,0" VerticalAlignment="Top" Width="447"/>
+
+    </Grid>
+</Window>
