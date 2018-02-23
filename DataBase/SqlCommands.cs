@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class SqlCommands
+    public  class SqlCommands
     {
 
         public DataTable selectCmd(String table)
         {
-            Queries obj = new Queries();
+            QueriesExecute obj = new QueriesExecute();
             String cmd = "Select * from " + table;
             DataTable dt = obj.select(cmd);
             return dt;
@@ -21,7 +21,7 @@ namespace DataBase
 
         public DataTable columns(String table)
         {
-            Queries obj = new Queries();
+            QueriesExecute obj = new QueriesExecute();
             String cmd = " select COLUMN_NAME from ALL_TAB_COLUMNS where TABLE_NAME = '" + table + "'";
             DataTable dt = obj.select(cmd);
             return dt;
@@ -35,7 +35,7 @@ namespace DataBase
 
         public void update(String table, object[] array, String primarykey, int value)
         {
-            Queries obj = new Queries();
+            QueriesExecute obj = new QueriesExecute();
 
 
             DataTable dt2 = columns(table);
@@ -85,7 +85,7 @@ namespace DataBase
 
         public void delete(String table, String column, String value)
         {
-            Queries obj = new Queries();
+            QueriesExecute obj = new QueriesExecute();
             String cmd = "Delete from " + table + " Where " + column + " = " + value;
             obj.other(cmd);
 

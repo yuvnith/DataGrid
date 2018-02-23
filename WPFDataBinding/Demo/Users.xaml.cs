@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DataBase;
 
 namespace WPFDataBinding.Demo
 {
@@ -21,9 +22,11 @@ namespace WPFDataBinding.Demo
     public partial class Users : Window
     {
         string _table = "DEMO_USERS";
-        string primarykey = "";
-        //GenericCommands GenericCommandsObject = new GenericCommands();
+        string primarykey = "id";
+        //GenericCommands SqlCommandsobj = new GenericCommands();
 
+
+        DataBase.SqlCommands SqlCommandsobj = new DataBase.SqlCommands();
 
 
 
@@ -42,7 +45,7 @@ namespace WPFDataBinding.Demo
 
         public void selectcmd()
         {
-            DataTable dt=GenericCommandsObject.selectCmd(_table);
+            DataTable dt= SqlCommandsobj.selectCmd(_table);
             dg.ItemsSource = dt.DefaultView;
             //Queries obj = new Queries();
             //String cmd = "Select * from DEMO_USERS order by id";
@@ -65,7 +68,7 @@ namespace WPFDataBinding.Demo
         {
             var data = (dg.SelectedItem as DataRowView).Row.ItemArray;
             int value = int.Parse(data[0].ToString());
-            GenericCommandsObject.update(_table, data , primarykey, value);
+            SqlCommandsobj.update(_table, data , primarykey, value);
             
 
 
@@ -104,7 +107,7 @@ namespace WPFDataBinding.Demo
         {
             var data = (dg.SelectedItem as DataRowView).Row.ItemArray;
             int id = int.Parse(data[0].ToString());
-            GenericCommandsObject.delete(_table, primarykey, data[0].ToString());
+            SqlCommandsobj.delete(_table, primarykey, data[0].ToString());
         }
     }
     public class Param

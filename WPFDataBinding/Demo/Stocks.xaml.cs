@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using DataBase;
 namespace WPFDataBinding.Demo
 {
     /// <summary>
@@ -23,7 +23,10 @@ namespace WPFDataBinding.Demo
 
         string table = "DEMO_STOCKS";
         string primarykey = "id";
-        GenericCommands GenericCommandsObject = new GenericCommands();
+        //GenericCommands GenericCommandsObject = new GenericCommands();
+
+        DataBase.SqlCommands GenericCommandsObject = new DataBase.SqlCommands();
+
 
         public Stocks()
         {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class Queries
+    class QueriesExecute
     {
         string con = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
         public DataTable select(string cmd)

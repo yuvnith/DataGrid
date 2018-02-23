@@ -31,6 +31,8 @@ namespace WPFDataBinding.Demo
         }
         public void other(string cmd)
         {
+            Console.WriteLine(cmd);
+
             using (OracleConnection oc = new OracleConnection(con))
             {
                 OracleCommand ocmd = new OracleCommand();
