@@ -77,10 +77,6 @@ namespace WPFDataBinding.Demo
             GenericCommandsObject.update(table, data, primarykey, id);
 
 
-
-
-
-
             //var data = (StocksGrid.SelectedItem as DataRowView).Row.ItemArray;
             //string ItemName = data[1].ToString();
             //string Vendor = data[3].ToString();
@@ -108,11 +104,6 @@ namespace WPFDataBinding.Demo
             //var data = (StocksGrid.SelectedItem as DataRowView).Row.ItemArray;
             //int id = int.Parse(data[0].ToString());
             //delete(id);
-
-
-
-
-
         }
 
         private void btn_Close_Click(object sender, RoutedEventArgs e)

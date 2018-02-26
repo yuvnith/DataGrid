@@ -36,22 +36,15 @@ namespace DataBase
         public void update(String table, object[] array, String primarykey, int value)
         {
             QueriesExecute obj = new QueriesExecute();
-
-
             DataTable dt2 = columns(table);
             string[] array2 = dt2.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
-
-
             //UPDATE Customers
             //SET ContactName = 'Alfred Schmidt', City = 'Frankfurt'
             //WHERE CustomerID = 1;
-
             String cmd = "";
-
             if (dt2.Rows.Count == array.Length)
             {
                 cmd = "update " + table + " set ";
-
                 for (int i = 0; i < array.Length; i++)
                 {
                     if (array2[i].ToString().ToUpper() != primarykey.ToUpper())
@@ -63,24 +56,14 @@ namespace DataBase
                         cmd += "' ";
                         if (i != array.Length - 1)
                             cmd += ",";
-
                     }
 
                 }
-
-
                 cmd += " Where " + primarykey;
                 cmd += "=";
-
                 cmd += value.ToString();
-
-
             }
-
-
             obj.other(cmd);
-
-
         }
 
         public void delete(String table, String column, String value)
@@ -88,7 +71,6 @@ namespace DataBase
             QueriesExecute obj = new QueriesExecute();
             String cmd = "Delete from " + table + " Where " + column + " = " + value;
             obj.other(cmd);
-
         }
 
 
